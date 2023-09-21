@@ -1,13 +1,16 @@
+import Home from '@/components/home';
 import Head from 'next/head';
 
-const Home = () => {
+const Index = () => {
   return (
     <>
       <Head>
         <title>Nshcode</title>
       </Head>
-      <main></main>
+      <main>
+        <Home />
+      </main>
     </>
   );
 };
-export default Home;
+export default Index;
