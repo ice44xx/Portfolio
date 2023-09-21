@@ -1,4 +1,10 @@
+import Skills from '@/components/skills';
+
 const HabilidadesPage = () => {
-  return <main></main>;
+  return (
+    <main>
+      <Skills />
+    </main>
+  );
 };
 export default HabilidadesPage;

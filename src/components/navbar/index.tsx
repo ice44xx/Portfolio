@@ -1,26 +1,49 @@
 import Link from 'next/link';
+import { useState } from 'react';
 import styles from './style.module.scss';
-const Navbar = () => {
+
+interface Props {
+  changePage: (section: string) => void;
+}
+
+const Navbar: React.FC<Props> = ({ changePage }) => {
+  const [activeSection, setActiveSection] = useState('home');
+  const changeActiveSection = (section: string) => {
+    setActiveSection(section);
+    changePage(section);
+  };
+
   return (
     <div className={styles.navbar}>
       <ul>
-        <Link href={'/'} className={styles.link}>
-          <li>Home</li>
-        </Link>
-        <Link href={'/sobre'} className={styles.link}>
-          <li>About</li>
-        </Link>
-        <Link href={'/habilidades'} className={styles.link}>
-          <li>Skills</li>
-        </Link>
-        <Link href={'/projetos'} className={styles.link}>
-          <li>Projects</li>
-        </Link>
-        <Link href={'/redes'} className={styles.link}>
-          <li>Redes</li>
-        </Link>
+        <li>
+          <button className={styles.btn} onClick={() => changeActiveSection('home')}>
+            Home
+          </button>
+        </li>
+        <li>
+          <button className={styles.btn} onClick={() => changeActiveSection('sobre')}>
+            Sobre
+          </button>
+        </li>
+        <li>
+          <button className={styles.btn} onClick={() => changeActiveSection('habilidades')}>
+            Habilidades
+          </button>
+        </li>
+        <li>
+          <button className={styles.btn} onClick={() => changeActiveSection('projetos')}>
+            Projetos
+          </button>
+        </li>
+        <li>
+          <button className={styles.btn} onClick={() => changeActiveSection('redes')}>
+            Redes
+          </button>
+        </li>
       </ul>
     </div>
   );
 };
+
 export default Navbar;

@@ -1,4 +1,10 @@
+import Redes from '@/components/redes';
+
 const RedesPage = () => {
-  return <main></main>;
+  return (
+    <main>
+      <Redes />
+    </main>
+  );
 };
 export default RedesPage;

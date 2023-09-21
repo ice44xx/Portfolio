@@ -1,4 +1,10 @@
+import Projects from '@/components/projects';
+
 const ProjetosPage = () => {
-  return <main></main>;
+  return (
+    <main>
+      <Projects />
+    </main>
+  );
 };
 export default ProjetosPage;

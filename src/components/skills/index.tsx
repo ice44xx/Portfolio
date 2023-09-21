@@ -1,13 +1,12 @@
-import Transition from '@/common/transition';
 import styles from '../../../styles/style.module.scss';
 
-const About = () => {
+const Skills = () => {
   return (
     <main>
       <div className={styles.container_master}>
-        <p>Sobre</p>
+        <p>Skills</p>
       </div>
     </main>
   );
 };
-export default About;
+export default Skills;
