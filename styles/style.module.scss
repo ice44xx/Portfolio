@@ -6,6 +6,7 @@
   width: 100%;
   gap: 20px;
   position: absolute;
+  text-align: center;
   color: white;
   .title {
     font-size: 100px;
@@ -15,6 +16,21 @@
   }
   .subtitle {
     font-size: 30px;
+  }
+  .container_whatsapp {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    .header {
+      font-size: 25px;
+    }
+    .img {
+      width: 60px;
+      cursor: pointer;
+    }
   }
 }
 .container_master {

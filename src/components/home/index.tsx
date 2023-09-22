@@ -6,7 +6,9 @@ import Transition from '@/common/transition';
 import About from '../about';
 import Skills from '../skills';
 import Projects from '../projects';
-import Redes from '../redes';
+import Contact from '../contact';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import Typing from '@/common/typed';
 
 const Home = () => {
   const [showTransition, setShowTransition] = useState(false);
@@ -31,7 +33,13 @@ const Home = () => {
           <p className={styles.title}>
             <span>NSH</span>CODE
           </p>
-          <p className={styles.subtitle}>Programando o Futuro, um Bit de Cada Vez.</p>
+          <p className={styles.subtitle}>
+            <Typing text='Programando o Futuro, um Bit de Cada Vez.' />
+          </p>
+          <div className={styles.container_whatsapp}>
+            <p className={styles.header}>Vamos conversar ?</p>
+            <img src='/whatsapp.png' alt='logo whatsapp' className={`${styles.img} fas fa-basketball fa-bounce`}></img>
+          </div>
         </div>
       )}
       {activeSection === 'sobre' && (
@@ -49,9 +57,9 @@ const Home = () => {
           <Projects />
         </div>
       )}
-      {activeSection === 'redes' && (
+      {activeSection === 'contact' && (
         <div className={styles.container}>
-          <Redes />
+          <Contact />
         </div>
       )}
     </main>

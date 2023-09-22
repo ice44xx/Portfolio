@@ -1,12 +1,12 @@
 import styles from '../../../styles/style.module.scss';
 
-const Redes = () => {
+const Contact = () => {
   return (
     <main>
       <div className={styles.container_master}>
-        <p>Redes</p>
+        <p>Contato</p>
       </div>
     </main>
   );
 };
-export default Redes;
+export default Contact;

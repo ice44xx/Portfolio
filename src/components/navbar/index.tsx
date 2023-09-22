@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { useState } from 'react';
 import styles from './style.module.scss';
 
@@ -37,7 +36,7 @@ const Navbar: React.FC<Props> = ({ changePage }) => {
           </button>
         </li>
         <li>
-          <button className={styles.btn} onClick={() => changeActiveSection('redes')}>
+          <button className={styles.btn} onClick={() => changeActiveSection('contato')}>
             Redes
           </button>
         </li>

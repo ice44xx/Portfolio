@@ -1,4 +1,4 @@
-import Redes from '@/components/redes';
+import Redes from '@/components/contact';
 
 const RedesPage = () => {
   return (
