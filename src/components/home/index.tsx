@@ -52,12 +52,12 @@ const Home = () => {
           <Skills />
         </div>
       )}
-      {activeSection === 'projects' && (
+      {activeSection === 'projetos' && (
         <div className={styles.container}>
           <Projects />
         </div>
       )}
-      {activeSection === 'contact' && (
+      {activeSection === 'contato' && (
         <div className={styles.container}>
           <Contact />
         </div>

@@ -4,7 +4,7 @@ const Contact = () => {
   return (
     <main>
       <div className={styles.container_master}>
-        <p>Contato</p>
+        <p>Contact</p>
       </div>
     </main>
   );
