@@ -70,7 +70,7 @@ export const ParticlesComponent = () => {
           number: {
             density: {
               enable: true,
-              area: 900
+              area: 1500
             },
             value: 90
           },

@@ -1,11 +1,10 @@
-import styles from '../../../styles/style.module.scss';
+import IconCloud from './globe';
 
 const Skills = () => {
   return (
     <main>
-      <div className={styles.container_master}>
-        <p>Skills</p>
-      </div>
+      <p>Conhecimentos</p>
+      <IconCloud />
     </main>
   );
 };

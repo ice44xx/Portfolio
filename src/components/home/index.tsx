@@ -27,9 +27,9 @@ const Home = () => {
     <main>
       <Navbar changePage={handlePageChange} />
       <Transition show={showTransition} />
-      <ParticlesComponent />
       {activeSection === 'home' && (
         <div className={styles.container}>
+          <ParticlesComponent />
           <p className={styles.title}>
             <span>NSH</span>CODE
           </p>
