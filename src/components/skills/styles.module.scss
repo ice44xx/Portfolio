@@ -40,6 +40,22 @@
         overflow: hidden;
         opacity: 1;
         border-left: 2px solid $primary;
+        .header {
+          cursor: pointer;
+          .title {
+            width: 100%;
+            font-size: 32px;
+            font-family: $font_passion;
+            .arrow {
+              margin-left: 10px;
+              transition: all 0.3s;
+              &:hover {
+                transform: scale(95%);
+                transition: all 0.3s;
+              }
+            }
+          }
+        }
       }
       .hidden {
         transition: 0.3s ease;
@@ -50,20 +66,6 @@
         .container_icon {
           opacity: 0;
           transition: all 0.3s;
-        }
-      }
-      .title {
-        width: 100%;
-        font-size: 32px;
-        font-family: $font_passion;
-        .arrow {
-          margin-left: 10px;
-          cursor: pointer;
-          transition: all 0.3s;
-          &:hover {
-            transform: scale(95%);
-            transition: all 0.3s;
-          }
         }
       }
       .container_content_icon {

@@ -132,15 +132,12 @@ const Skills = () => {
         <div className={styles.container_right}>
           <div className={styles.container_content}>
             <div className={`${styles.container_hidden_icons} ${!visible.skills && styles.hidden}`}>
-              <p className={`${styles.title} ${styles.titleHidden}`}>
-                Conhecimentos
-                <img
-                  src={visible.skills ? '/arrowUp.png' : '/arrow.png'}
-                  alt='flecha'
-                  className={styles.arrow}
-                  onClick={() => handleClick('skills')}
-                />
-              </p>
+              <div className={styles.header}>
+                <p className={`${styles.title} ${styles.titleHidden}`} onClick={() => handleClick('skills')}>
+                  Conhecimentos
+                  <img src={visible.skills ? '/arrowUp.png' : '/arrow.png'} alt='flecha' className={styles.arrow} />
+                </p>
+              </div>
               <div className={styles.container_content_icon}>
                 {skills.map((icon, index) => (
                   <div className={styles.container_icon}>
@@ -150,18 +147,14 @@ const Skills = () => {
               </div>
             </div>
           </div>
-
           <div className={styles.container_content}>
             <div className={`${styles.container_hidden_icons} ${!visible.databases && styles.hidden}`}>
-              <p className={styles.title}>
-                Bancos de Dados
-                <img
-                  src={visible.databases ? '/arrowUp.png' : '/arrow.png'}
-                  alt='flecha'
-                  className={styles.arrow}
-                  onClick={() => handleClick('databases')}
-                />
-              </p>
+              <div className={styles.header} onClick={() => handleClick('databases')}>
+                <p className={styles.title}>
+                  Bancos de Dados
+                  <img src={visible.databases ? '/arrowUp.png' : '/arrow.png'} alt='flecha' className={styles.arrow} />
+                </p>
+              </div>
               <div className={`${styles.container_content_icon} ${styles.container_content_icon_ext}`}>
                 {databases.map((icon, index) => (
                   <div className={styles.container_icon}>
@@ -171,18 +164,14 @@ const Skills = () => {
               </div>
             </div>
           </div>
-
           <div className={styles.container_content}>
             <div className={`${styles.container_hidden_icons} ${!visible.softwares && styles.hidden}`}>
-              <p className={styles.title}>
-                Softwares
-                <img
-                  src={visible.softwares ? '/arrowUp.png' : '/arrow.png'}
-                  alt='flecha'
-                  className={styles.arrow}
-                  onClick={() => handleClick('softwares')}
-                />
-              </p>
+              <div className={styles.header} onClick={() => handleClick('softwares')}>
+                <p className={styles.title}>
+                  Softwares
+                  <img src={visible.softwares ? '/arrowUp.png' : '/arrow.png'} alt='flecha' className={styles.arrow} />
+                </p>
+              </div>
               <div className={`${styles.container_content_icon} ${styles.container_content_icon_ext}`}>
                 {softwares.map((icon, index) => (
                   <div className={styles.container_icon}>
@@ -192,18 +181,14 @@ const Skills = () => {
               </div>
             </div>
           </div>
-
           <div className={styles.container_content}>
             <div className={`${styles.container_hidden_icons} ${!visible.controlVersions && styles.hidden}`}>
-              <p className={styles.title}>
-                Controle de Versões
-                <img
-                  src={visible.controlVersions ? '/arrowUp.png' : '/arrow.png'}
-                  alt='flecha'
-                  className={styles.arrow}
-                  onClick={() => handleClick('controlVersions')}
-                />
-              </p>
+              <div className={styles.header} onClick={() => handleClick('controlVersions')}>
+                <p className={styles.title}>
+                  Controle de Versões
+                  <img src={visible.controlVersions ? '/arrowUp.png' : '/arrow.png'} alt='flecha' className={styles.arrow} />
+                </p>
+              </div>
               <div className={`${styles.container_content_icon} ${styles.container_content_icon_ext}`}>
                 {versions.map((icon, index) => (
                   <div className={styles.container_icon}>
