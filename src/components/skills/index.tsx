@@ -135,7 +135,7 @@ const Skills = () => {
               <div className={styles.header}>
                 <p className={`${styles.title} ${styles.titleHidden}`} onClick={() => handleClick('skills')}>
                   Conhecimentos
-                  <img src={visible.skills ? '/arrowUp.png' : '/arrow.png'} alt='flecha' className={styles.arrow} />
+                  <img src={visible.skills ? '/arrow.png' : '/arrowUp.png'} alt='flecha' className={styles.arrow} />
                 </p>
               </div>
               <div className={styles.container_content_icon}>
@@ -148,7 +148,7 @@ const Skills = () => {
             </div>
           </div>
           <div className={styles.container_content}>
-            <div className={`${styles.container_hidden_icons} ${!visible.databases && styles.hidden}`}>
+            <div className={`${styles.container_hidden_icons} ${visible.databases && styles.hidden}`}>
               <div className={styles.header} onClick={() => handleClick('databases')}>
                 <p className={styles.title}>
                   Bancos de Dados
@@ -165,7 +165,7 @@ const Skills = () => {
             </div>
           </div>
           <div className={styles.container_content}>
-            <div className={`${styles.container_hidden_icons} ${!visible.softwares && styles.hidden}`}>
+            <div className={`${styles.container_hidden_icons} ${visible.softwares && styles.hidden}`}>
               <div className={styles.header} onClick={() => handleClick('softwares')}>
                 <p className={styles.title}>
                   Softwares
@@ -182,7 +182,7 @@ const Skills = () => {
             </div>
           </div>
           <div className={styles.container_content}>
-            <div className={`${styles.container_hidden_icons} ${!visible.controlVersions && styles.hidden}`}>
+            <div className={`${styles.container_hidden_icons} ${visible.controlVersions && styles.hidden}`}>
               <div className={styles.header} onClick={() => handleClick('controlVersions')}>
                 <p className={styles.title}>
                   Controle de Versões
