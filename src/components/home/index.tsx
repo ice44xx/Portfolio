@@ -9,6 +9,7 @@ import Projects from '../projects';
 import Contact from '../contact';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import Typing from '@/common/typed';
+import Link from 'next/link';
 
 const Home = () => {
   const [showTransition, setShowTransition] = useState(false);
@@ -37,8 +38,10 @@ const Home = () => {
             <Typing text='Programando o Futuro, um Bit de Cada Vez.' />
           </p>
           <div className={styles.container_whatsapp}>
-            <p className={styles.header}>Vamos conversar ?</p>
-            <img src='/whatsapp.png' alt='logo whatsapp' className={`${styles.img} fas fa-basketball fa-bounce`}></img>
+            <Link href={'https://api.whatsapp.com/send?phone=555193347391'} target='_blank' className={styles.link}>
+              <p className={styles.header}>Vamos conversar ?</p>{' '}
+              <img src='/whatsapp.png' alt='logo whatsapp' className={`${styles.img} fas fa-basketball fa-bounce`}></img>
+            </Link>
           </div>
         </div>
       )}

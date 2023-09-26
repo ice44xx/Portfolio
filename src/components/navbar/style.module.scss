@@ -1,3 +1,4 @@
+@import '../../../styles/colors.scss';
 .navbar {
   z-index: 9999;
   position: absolute;
@@ -24,6 +25,7 @@
         font-size: 25px;
         color: white;
         transition: all 0.3s;
+        font-family: $font_passion;
         cursor: pointer;
         &:hover {
           color: rgb(0, 255, 140);

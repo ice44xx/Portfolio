@@ -1,8 +1,9 @@
+@import './colors.scss';
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Rubik', sans-serif;
+  font-family: $font_rubik;
 }
 main {
   width: 100%;

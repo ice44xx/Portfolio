@@ -1,9 +1,6 @@
 import styles from './styles.module.scss';
 import IconCloud from './globe';
 import { useState } from 'react';
-import arrow from '/public/arrow.png';
-import arrowUp from '/public/arrowUp.png';
-import Image from 'next/image';
 
 const skills = [
   {
@@ -138,7 +135,7 @@ const Skills = () => {
               <p className={`${styles.title} ${styles.titleHidden}`}>
                 Conhecimentos
                 <img
-                  src={visible.skills ? '/arrow.png' : '/arrowUp.png'}
+                  src={visible.skills ? '/arrowUp.png' : '/arrow.png'}
                   alt='flecha'
                   className={styles.arrow}
                   onClick={() => handleClick('skills')}
@@ -159,7 +156,7 @@ const Skills = () => {
               <p className={styles.title}>
                 Bancos de Dados
                 <img
-                  src={visible.databases ? '/arrow.png' : '/arrowUp.png'}
+                  src={visible.databases ? '/arrowUp.png' : '/arrow.png'}
                   alt='flecha'
                   className={styles.arrow}
                   onClick={() => handleClick('databases')}
@@ -180,7 +177,7 @@ const Skills = () => {
               <p className={styles.title}>
                 Softwares
                 <img
-                  src={visible.softwares ? '/arrow.png' : '/arrowUp.png'}
+                  src={visible.softwares ? '/arrowUp.png' : '/arrow.png'}
                   alt='flecha'
                   className={styles.arrow}
                   onClick={() => handleClick('softwares')}
@@ -201,7 +198,7 @@ const Skills = () => {
               <p className={styles.title}>
                 Controle de Versões
                 <img
-                  src={visible.controlVersions ? '/arrow.png' : '/arrowUp.png'}
+                  src={visible.controlVersions ? '/arrowUp.png' : '/arrow.png'}
                   alt='flecha'
                   className={styles.arrow}
                   onClick={() => handleClick('controlVersions')}
