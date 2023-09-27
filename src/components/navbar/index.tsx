@@ -1,42 +1,48 @@
 import { useState } from 'react';
 import styles from './style.module.scss';
+import CloseBtn from '@/common/close';
 
 interface Props {
   changePage: (section: string) => void;
 }
 
 const Navbar: React.FC<Props> = ({ changePage }) => {
+  const [active, setActive] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const changeActiveSection = (section: string) => {
     setActiveSection(section);
     changePage(section);
   };
+  const handleToggle = () => {
+    setActive(!active);
+  };
 
   return (
-    <div className={styles.navbar}>
+    <div className={`${styles.navbar} ${active ? styles.navbar : styles.navbarHidden}`}>
+      <CloseBtn click={handleToggle} />
       <ul>
         <li>
-          <button className={styles.btn} onClick={() => changeActiveSection('home')}>
+          <button className={`${styles.btn} ${styles.btn1}`} onClick={() => changeActiveSection('home')}>
             Home
           </button>
         </li>
         <li>
-          <button className={styles.btn} onClick={() => changeActiveSection('sobre')}>
+          <button className={`${styles.btn} ${styles.btn2}`} onClick={() => changeActiveSection('sobre')}>
             Sobre
           </button>
         </li>
         <li>
-          <button className={styles.btn} onClick={() => changeActiveSection('habilidades')}>
+          <button className={`${styles.btn} ${styles.btn3}`} onClick={() => changeActiveSection('habilidades')}>
             Habilidades
           </button>
         </li>
         <li>
-          <button className={styles.btn} onClick={() => changeActiveSection('projetos')}>
+          <button className={`${styles.btn} ${styles.btn4}`} onClick={() => changeActiveSection('projetos')}>
             Projetos
           </button>
         </li>
         <li>
-          <button className={styles.btn} onClick={() => changeActiveSection('contato')}>
+          <button className={`${styles.btn} ${styles.btn5}`} onClick={() => changeActiveSection('contato')}>
             Redes
           </button>
         </li>

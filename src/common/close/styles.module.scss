@@ -1,54 +1,48 @@
-.container {
+// Classe para o container principal do botão
+.container_line {
+  top: 40px;
+  left: 70px;
   position: absolute;
-  top: 20px;
-  right: 20px;
   display: flex;
   align-items: center;
-  flex-direction: column;
-  gap: 8px;
-  .container_line {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    height: 40px;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    .line {
-      position: absolute;
-      width: 25px;
-      height: 3px;
-      background-color: rgb(255, 255, 255);
-    }
-    .line1 {
+  justify-content: center;
+  width: 60px;
+  height: 50px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s;
+  .line {
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    transition: all 0.4s;
+
+    &.line1 {
       top: 10px;
-      transition: all 0.4s;
+    }
+
+    &.line2 {
+      top: 18px;
+    }
+
+    &.line3 {
+      top: 27px;
+    }
+  }
+  &.active {
+    left: 130px;
+    transition: all 0.6s;
+    .line1 {
+      top: 20px;
+      transform: rotate(50deg);
     }
     .line2 {
-      top: 18px;
-      transition: all 0.2s;
+      margin-right: -100px;
     }
     .line3 {
-      top: 27px;
-      transition: all 0.4s;
-    }
-    &:hover {
-      transition: all 0.3s;
-      .line1 {
-        top: 20px;
-        transform: rotate(50deg);
-        transition: all 0.4s;
-      }
-      .line2 {
-        margin-right: -100px;
-        transition: all 0.4s;
-      }
-      .line3 {
-        top: 20px;
-        transform: rotate(125deg);
-        transition: all 0.4s;
-      }
+      top: 20px;
+      transform: rotate(125deg);
     }
   }
 }

@@ -19,12 +19,31 @@
     list-style: none;
     text-align: center;
     li {
+      .btn1 {
+        opacity: 1;
+        transition: all 0.3s;
+      }
+      .btn2 {
+        opacity: 1;
+        transition: all 0.6s;
+      }
+      .btn3 {
+        opacity: 1;
+        transition: all 1s;
+      }
+      .btn4 {
+        opacity: 1;
+        transition: all 1.3s;
+      }
+      .btn5 {
+        opacity: 1;
+        transition: all 1.6s;
+      }
       .btn {
         background-color: transparent;
         border: none;
         font-size: 25px;
         color: white;
-        transition: all 0.3s;
         font-family: $font_passion;
         cursor: pointer;
         &:hover {
@@ -32,6 +51,46 @@
           transition: all 0.3s;
           transform: scale(95%);
         }
+      }
+    }
+  }
+}
+.navbarHidden {
+  border: none;
+  background-color: transparent;
+  backdrop-filter: blur(0px);
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    text-decoration: none;
+    list-style: none;
+    text-align: center;
+    li {
+      .btn1 {
+        margin-left: -400px;
+        opacity: 0;
+        transition: all 0.3s;
+      }
+      .btn2 {
+        margin-left: -400px;
+        opacity: 0;
+        transition: all 0.6s;
+      }
+      .btn3 {
+        margin-left: -400px;
+        opacity: 0;
+        transition: all 1s;
+      }
+      .btn4 {
+        margin-left: -400px;
+        opacity: 0;
+        transition: all 1.3s;
+      }
+      .btn5 {
+        margin-left: -400px;
+        opacity: 0;
+        transition: all 1.6s;
       }
     }
   }
