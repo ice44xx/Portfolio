@@ -1,0 +1,114 @@
+@import '../../../styles/colors.scss';
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 20px;
+  padding: 0 10px;
+  .conainer_projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+    height: 700px;
+    border: 2px solid $primary;
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    .splide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      max-width: 1150px;
+      height: 700px;
+    }
+    .splide_slide {
+      display: flex;
+      width: 100%;
+      height: 700px;
+      justify-content: center;
+      align-items: center;
+    }
+    .container_projects_box {
+      display: flex;
+      justify-content: center;
+      padding: 30px 0;
+      .title {
+        top: 30px;
+        left: 20px;
+        position: absolute;
+        p {
+          font-size: 50px;
+          font-family: $font_passion;
+        }
+      }
+      .projects {
+        position: relative;
+        width: 650px;
+        height: 500px;
+        background-image: url('/circulo.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        cursor: pointer;
+        .logo {
+          top: 0;
+          left: -600px;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          opacity: 1;
+          transition: all 0.4s;
+          &:hover {
+            transform: scale(105%);
+            transition: all 0.4s;
+          }
+        }
+        .visible {
+          left: 0;
+          transition: all 1s;
+          opacity: 1;
+        }
+      }
+      .container_content_project_items {
+        display: flex;
+        .container_another_items {
+          padding: 0 60px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: left;
+          gap: 40px;
+          width: 300px;
+          height: 500px;
+          .container_options {
+            min-width: 135px;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            gap: 15px;
+            transition: all 0.3s;
+            .item {
+              font-family: $font_passion;
+              font-size: 35px;
+              cursor: pointer;
+            }
+            &:hover {
+              transform: translateY(-8px);
+              transition: all 0.3s;
+            }
+          }
+        }
+      }
+    }
+  }
+}

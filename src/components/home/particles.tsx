@@ -20,7 +20,7 @@ export const ParticlesComponent = () => {
       options={{
         background: {
           color: {
-            value: '#101010'
+            value: '#13131F'
           }
         },
         fpsLimit: 120,
