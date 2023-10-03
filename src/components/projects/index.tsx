@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import styles from './styles.module.scss';
 import Carousel from '@/common/carousel';
+import Card from './card';
 
 type Keys = 'Pc' | 'Tablet' | 'Celular';
 const data = [
@@ -10,6 +11,38 @@ const data = [
       Pc: '/projects/nury/pc.png',
       Tablet: '/projects/nury/tablet.png',
       Celular: '/projects/nury/celular.png'
+    },
+    info: {
+      title: 'Nury Vidros',
+      url: 'https://www.youtube.com/watch?v=RZQlr21fiAU',
+      desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, temporibus!',
+      tools: [
+        {
+          name: 'HTML5',
+          image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg'
+        },
+        {
+          name: 'CSS3',
+          image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg'
+        },
+        {
+          name: 'Sass',
+          image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg'
+        },
+        {
+          name: 'Javascript',
+          image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg'
+        },
+        {
+          name: 'ReactJS',
+          image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'
+        },
+        {
+          name: 'Figma',
+          image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg'
+        }
+      ],
+      date: '03 de Dezembro de 2022'
     }
   },
   {
@@ -18,6 +51,13 @@ const data = [
       Pc: '/projects/nury/pc.png',
       Tablet: '/projects/nury/tablet.png',
       Celular: '/projects/nury/celular.png'
+    },
+    info: {
+      title: 'Studio Emily Dias',
+      url: 'https://www.youtube.com/watch?v=RZQlr21fiAU',
+      desc: 'outras informações',
+      tools: ['outras ferramentas'],
+      date: '04 de Dezembro de 2022'
     }
   }
 ];
@@ -27,6 +67,10 @@ const Projects = () => {
   const [currentProject, setCurrentProject] = useState(0);
   const [selectedItem, setSelectedItem] = useState<Keys>('Pc');
   const projects = data[currentProject];
+  const [visible, setVisible] = useState(false);
+  const handleVisible = () => {
+    setVisible(!visible);
+  };
 
   const handleClick = (item: Keys) => {
     if (item !== selectedItem) {
@@ -46,9 +90,16 @@ const Projects = () => {
     <main>
       <div className={styles.container}>
         <div className={styles.conainer_projects}>
-          <Carousel getImgForSelectItem={getImgForSelectItem} handleClick={handleClick} projects={data} isImageVisible={isImageVisible} />
+          <Carousel
+            handleVisible={handleVisible}
+            getImgForSelectItem={getImgForSelectItem}
+            handleClick={handleClick}
+            projects={data}
+            isImageVisible={isImageVisible}
+          />
         </div>
       </div>
+      {visible ? <Card info={projects.info} open={visible} toggle={handleVisible} /> : ''}
     </main>
   );
 };

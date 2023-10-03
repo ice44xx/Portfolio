@@ -9,6 +9,7 @@
   height: 100%;
   gap: 20px;
   padding: 0 10px;
+  overflow: hidden;
   .conainer_projects {
     display: flex;
     justify-content: center;
@@ -41,9 +42,36 @@
       justify-content: center;
       padding: 30px 0;
       .title {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
         top: 30px;
-        left: 20px;
+        padding: 0 30px;
         position: absolute;
+        .info {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          transition: all 0.4s;
+          img {
+            object-fit: contain;
+            transform: rotate(0deg);
+            transition: all 0.4s;
+          }
+          p {
+            font-size: 40px;
+          }
+          &:hover {
+            transform: scale(95%);
+            transition: all 0.4s;
+            img {
+              transform: rotate(270deg);
+              transition: all 0.4s;
+            }
+          }
+        }
+        cursor: pointer;
         p {
           font-size: 50px;
           font-family: $font_passion;
@@ -53,13 +81,11 @@
         position: relative;
         width: 650px;
         height: 500px;
-        background-image: url('/circulo.png');
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
         overflow: hidden;
         cursor: pointer;
-        .logo {
+        .container_logo {
+          display: flex;
+          justify-content: center;
           top: 0;
           left: -600px;
           position: absolute;
@@ -68,9 +94,20 @@
           object-fit: contain;
           opacity: 1;
           transition: all 0.4s;
-          &:hover {
-            transform: scale(105%);
+          .logo {
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
             transition: all 0.4s;
+            &:hover {
+              transform: scale(105%);
+              transition: all 0.4s;
+            }
+          }
+          .circle {
+            position: absolute;
+            animation: spin 10s linear infinite;
           }
         }
         .visible {
@@ -110,5 +147,90 @@
         }
       }
     }
+  }
+}
+.container_blur {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.362);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  height: 100%;
+  .container_card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+    max-width: 1000px;
+    max-height: 500px;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: rgb(23, 23, 23);
+    border: 2px solid $white;
+    opacity: 1;
+    transition: all 0.4s;
+    .close {
+      right: 20px;
+      position: absolute;
+      cursor: pointer;
+    }
+    .container_content_card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 45px;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      .title {
+        font-size: 30px;
+      }
+      .desc {
+        text-align: center;
+      }
+      .date {
+        text-align: left;
+        width: 100%;
+        color: $primary;
+      }
+      .container_content_parts {
+        display: flex;
+        gap: 40px;
+        .tools {
+          display: flex;
+          flex-direction: column;
+          gap: 25px;
+          .container_content_tools {
+            display: grid;
+            gap: 5px;
+            .container_tools {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              .icons {
+                width: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.container_card_hidden {
+  top: -600px;
+  transition: all 0.4s;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

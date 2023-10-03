@@ -1,6 +1,8 @@
+import Card from '@/components/projects/card';
 import styles from '../../components/projects/styles.module.scss';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
+import { useState } from 'react';
 
 interface Props {
   projects: {
@@ -10,15 +12,27 @@ interface Props {
       Tablet: string;
       Celular: string;
     };
+    info?: {
+      title: string;
+      url: string;
+      desc: string;
+      tools: Tools[];
+      date: string;
+    };
   }[];
+  handleVisible: (item: any) => void;
   handleClick: (item: any) => void;
   getImgForSelectItem: () => string;
   isImageVisible: boolean;
 }
+interface Tools {
+  name: string;
+  image: string;
+}
 
 type Keys = 'Pc' | 'Tablet' | 'Celular';
 
-const Carousel: React.FC<Props> = ({ projects, handleClick, getImgForSelectItem, isImageVisible }) => {
+const Carousel: React.FC<Props> = ({ projects, handleClick, getImgForSelectItem, isImageVisible, handleVisible }) => {
   return (
     <>
       <Splide className={styles.splide}>
@@ -27,10 +41,17 @@ const Carousel: React.FC<Props> = ({ projects, handleClick, getImgForSelectItem,
             <div className={styles.container_projects_box}>
               <div className={styles.title}>
                 <p>{project.name}</p>
+                <div className={styles.info} onClick={handleVisible}>
+                  <img src='/more.png' alt='informações' />
+                  <p>Info</p>
+                </div>
               </div>
               <div className={styles.container_content_project_items}>
                 <div className={styles.projects}>
-                  <img src={getImgForSelectItem()} alt={project.name} className={`${styles.logo} ${isImageVisible ? styles.visible : ''}`} />
+                  <div className={`${styles.container_logo} ${isImageVisible ? styles.visible : ''}`}>
+                    <img src={getImgForSelectItem()} alt={project.name} className={styles.logo} />
+                    <img src='/circulo.png' alt='circulo' className={styles.circle} />
+                  </div>
                 </div>
                 <div className={styles.container_another_items}>
                   {Object.keys(project.images).map(item => (

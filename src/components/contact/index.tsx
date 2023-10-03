@@ -5,22 +5,22 @@ import Link from 'next/link';
 
 const icons = [
   {
-    url: '/whats.png',
+    url: '/redes/whats.png',
     alt: 'Whatsapp',
     link: 'https://api.whatsapp.com/send?phone=555193347391'
   },
   {
-    url: '/instagram.png',
+    url: '/redes/instagram.png',
     alt: 'Instagram',
     link: 'https://www.instagram.com/nathans4x/'
   },
   {
-    url: '/linkedin.png',
+    url: '/redes/linkedin.png',
     alt: 'Linkedin',
     link: 'https://www.linkedin.com/in/nathan-sant-helena-bb0623285'
   },
   {
-    url: '/github.png',
+    url: '/redes/github.png',
     alt: 'GitHub',
     link: 'https://github.com/ice44xx'
   }
