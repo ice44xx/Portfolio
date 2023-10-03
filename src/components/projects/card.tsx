@@ -18,7 +18,7 @@ interface Tools {
 }
 const Card: React.FC<Props> = ({ toggle, open, info }) => {
   return (
-    <div className={styles.container_blur}>
+    <div className={styles.container_blur} onClick={toggle}>
       <div className={`${styles.container_card} ${open ? styles.container_card : styles.container_card_hidden}`}>
         <img src='/fechar.png' alt='fechar' className={styles.close} onClick={toggle} />
         <div className={styles.container_content_card}>

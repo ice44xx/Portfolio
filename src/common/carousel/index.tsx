@@ -23,6 +23,7 @@ interface Props {
   handleVisible: (item: any) => void;
   handleClick: (item: any) => void;
   getImgForSelectItem: () => string;
+  onProjectSelect: (index: number) => void;
   isImageVisible: boolean;
 }
 interface Tools {
@@ -32,12 +33,12 @@ interface Tools {
 
 type Keys = 'Pc' | 'Tablet' | 'Celular';
 
-const Carousel: React.FC<Props> = ({ projects, handleClick, getImgForSelectItem, isImageVisible, handleVisible }) => {
+const Carousel: React.FC<Props> = ({ projects, handleClick, getImgForSelectItem, isImageVisible, handleVisible, onProjectSelect }) => {
   return (
     <>
       <Splide className={styles.splide}>
-        {projects.map(project => (
-          <SplideSlide className={styles.splide_slide}>
+        {projects.map((project, index) => (
+          <SplideSlide className={styles.splide_slide} onClick={() => onProjectSelect(index)}>
             <div className={styles.container_projects_box}>
               <div className={styles.title}>
                 <p>{project.name}</p>

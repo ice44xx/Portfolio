@@ -65,8 +65,9 @@ const data = [
 const Projects = () => {
   const [isImageVisible, setIsImageVisible] = useState(true);
   const [currentProject, setCurrentProject] = useState(0);
+  const [selectProject, setSelectProject] = useState(0);
   const [selectedItem, setSelectedItem] = useState<Keys>('Pc');
-  const projects = data[currentProject];
+  const projects = data[selectProject];
   const [visible, setVisible] = useState(false);
   const handleVisible = () => {
     setVisible(!visible);
@@ -86,6 +87,10 @@ const Projects = () => {
     return projects.images[selectedItem];
   };
 
+  const handleProjectSelect = (index: number) => {
+    setSelectProject(index);
+  };
+
   return (
     <main>
       <div className={styles.container}>
@@ -96,6 +101,7 @@ const Projects = () => {
             handleClick={handleClick}
             projects={data}
             isImageVisible={isImageVisible}
+            onProjectSelect={handleProjectSelect}
           />
         </div>
       </div>
