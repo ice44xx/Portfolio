@@ -1,5 +1,5 @@
 import styles from './styles.module.scss';
-import IconCloud from './globe';
+import DynamicIconCloud from './globe';
 import { useState } from 'react';
 
 const skills = [
@@ -127,7 +127,7 @@ const Skills = () => {
     <main className={styles.main}>
       <div className={styles.container}>
         <div className={styles.container_left}>
-          <IconCloud />
+          <DynamicIconCloud />
         </div>
         <div className={styles.container_right}>
           <div className={styles.container_content}>
