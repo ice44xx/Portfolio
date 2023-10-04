@@ -1,8 +1,6 @@
-import Card from '@/components/projects/card';
 import styles from '../../components/projects/styles.module.scss';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
-import { useState } from 'react';
 
 interface Props {
   projects: {

@@ -124,7 +124,7 @@ const Skills = () => {
   };
 
   return (
-    <main>
+    <main className={styles.main}>
       <div className={styles.container}>
         <div className={styles.container_left}>
           <IconCloud />

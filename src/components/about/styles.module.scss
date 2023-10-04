@@ -7,6 +7,7 @@
   justify-content: center;
   align-items: center;
   gap: 80px;
+  overflow: hidden;
   .container_content {
     display: flex;
     justify-content: center;
@@ -51,6 +52,7 @@
       align-items: center;
       gap: 15px;
       max-width: 650px;
+      width: 100%;
       .bar {
         position: absolute;
         width: 3px;
@@ -69,7 +71,7 @@
       }
       .desc {
         margin-left: 15px;
-        text-align: left;
+        text-align: center;
         font-size: 22px;
       }
       .desc_one {
@@ -154,6 +156,91 @@
             transition: all 0.4s;
           }
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 1080px) {
+  .container {
+    gap: 20px;
+    .container_content {
+      flex-direction: column;
+      .about {
+        max-width: 95%;
+        .bar {
+          width: 3px;
+          height: 100%;
+          right: -10px;
+        }
+        .title {
+          font-size: 35px;
+        }
+        .desc {
+          font-size: 18px;
+        }
+        .desc_one {
+          font-size: 20px;
+        }
+        .desc_two {
+          font-size: 16px;
+        }
+        .desc_third {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 835px) {
+  .container {
+    .container_content {
+      .container_hero {
+        width: 250px;
+        height: 250px;
+      }
+      .about {
+        .bar {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 550px) {
+  .container {
+    .container_content {
+      .about {
+        .title {
+          font-size: max(6.5vw, 15px);
+        }
+        .desc {
+          font-size: max(4vw, 15px);
+        }
+        .desc_one {
+          font-size: max(3.5vw, 15px);
+        }
+        .desc_two {
+          font-size: max(3.2vw, 15px);
+        }
+        .desc_third {
+          font-size: max(3.2vw, 15px);
+        }
+      }
+    }
+    .download {
+      .title {
+        font-size: max(5vw, 15px);
+      }
+    }
+  }
+}
+@media (max-width: 380px) {
+  .container {
+    .container_content {
+      .container_hero {
+        width: 220px;
+        height: 220px;
       }
     }
   }

@@ -10,6 +10,7 @@ interface Props {
     url: string;
     tools: Tools[];
     date: string;
+    rede: string;
   };
 }
 interface Tools {
@@ -18,7 +19,7 @@ interface Tools {
 }
 const Card: React.FC<Props> = ({ toggle, open, info }) => {
   return (
-    <div className={styles.container_blur} onClick={toggle}>
+    <div className={styles.container_blur}>
       <div className={`${styles.container_card} ${open ? styles.container_card : styles.container_card_hidden}`}>
         <img src='/fechar.png' alt='fechar' className={styles.close} onClick={toggle} />
         <div className={styles.container_content_card}>
@@ -38,7 +39,12 @@ const Card: React.FC<Props> = ({ toggle, open, info }) => {
               </div>
             </div>
           </div>
-          <p className={styles.date}>{info?.date}</p>
+          <div className={styles.footer}>
+            <p className={styles.date}>{info?.date}</p>
+            <a href={info?.rede} target='_blank'>
+              <img src='/redes/github.png' alt='github' />
+            </a>
+          </div>
         </div>
       </div>
     </div>
