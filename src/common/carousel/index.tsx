@@ -39,7 +39,7 @@ const Carousel: React.FC<Props> = ({ projects, handleClick, getImgForSelectItem,
           <SplideSlide className={styles.splide_slide} onClick={() => onProjectSelect(index)}>
             <div className={styles.container_projects_box}>
               <div className={styles.title}>
-                <p>{project.name}</p>
+                <p className={styles.name}>{project.name}</p>
                 <div className={styles.info} onClick={handleVisible}>
                   <img src='/more.png' alt='informações' />
                   <p>Info</p>

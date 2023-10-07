@@ -26,7 +26,9 @@ const Card: React.FC<Props> = ({ toggle, open, info }) => {
           <p className={styles.title}>{info?.title}</p>
           <p className={styles.desc}>{info?.desc}</p>
           <div className={styles.container_content_parts}>
-            <ReactPlayer url={info?.url} width={355} height={200} muted loop={false} playing={true} />
+            <div className={styles.container_video}>
+              <ReactPlayer className={styles.video} url={info?.url} muted loop={false} playing={true} />
+            </div>
             <div className={styles.tools}>
               <p>Esse projeto foi desenvolvido com as seguintes ferramentas:</p>
               <div className={styles.container_content_tools}>

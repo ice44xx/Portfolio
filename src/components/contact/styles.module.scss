@@ -85,7 +85,9 @@
   border: 2px solid $primary;
   transition: all 0.3s;
   opacity: 1;
-  top: 250px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   .close {
     cursor: pointer;
     position: absolute;
@@ -241,8 +243,69 @@
 }
 .openSendHidden {
   z-index: 0;
-  position: fixed;
   top: -250px;
+  left: 50%;
   opacity: 0;
   transition: top 0.3s, opacity 0.3s;
+}
+
+@media (max-width: 650px) {
+  .container {
+    .redes {
+      .header {
+        p {
+          font-size: 30px;
+        }
+      }
+      .bar {
+        width: 2px;
+        height: 80px;
+      }
+      .container_redes {
+        .container_icon {
+          img {
+            width: 60px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 450px) {
+  .container {
+    .redes {
+      flex-direction: column;
+      .header {
+        p {
+          font-size: 30px;
+          border-left: 2px solid $primary;
+          padding: 0 5px;
+        }
+      }
+      .bar {
+        display: none;
+      }
+      .container_redes {
+        gap: 10px;
+        .container_icon {
+          img {
+            max-width: 60px;
+            width: 100%;
+          }
+        }
+      }
+    }
+    .container_send {
+      .header {
+        .send {
+          max-width: 50px;
+          max-height: 50px;
+          width: 100%;
+        }
+        p {
+          font-size: 30px;
+        }
+      }
+    }
+  }
 }
