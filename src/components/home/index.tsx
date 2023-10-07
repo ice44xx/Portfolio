@@ -1,4 +1,4 @@
-import styles from '../../../styles/style.module.scss';
+import styles from './styles.module.scss';
 import Navbar from '../navbar';
 import { useState } from 'react';
 import { ParticlesComponent } from './particles';

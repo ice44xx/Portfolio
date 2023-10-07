@@ -70,7 +70,6 @@
         }
       }
       .desc {
-        margin-left: 15px;
         text-align: center;
         font-size: 22px;
       }
@@ -212,19 +211,19 @@
     .container_content {
       .about {
         .title {
-          font-size: max(6.5vw, 15px);
+          font-size: max(6.4vw, 14px);
         }
         .desc {
-          font-size: max(4vw, 15px);
+          font-size: max(4.8vw, 14px);
         }
         .desc_one {
-          font-size: max(3.5vw, 15px);
+          font-size: max(3.6vw, 15px);
         }
         .desc_two {
-          font-size: max(3.2vw, 15px);
+          font-size: max(3.1vw, 14px);
         }
         .desc_third {
-          font-size: max(3.2vw, 15px);
+          font-size: max(3.1vw, 14px);
         }
       }
     }
@@ -241,6 +240,30 @@
       .container_hero {
         width: 220px;
         height: 220px;
+      }
+    }
+  }
+}
+@media (max-width: 300px) {
+  @media (max-width: 380px) {
+    .container {
+      .container_content {
+        .container_hero {
+          width: 180px;
+          height: 180px;
+        }
+      }
+      .download {
+        .link {
+          .container_img {
+            width: 42px;
+            height: 42px;
+            img {
+              width: 30px;
+              height: 30px;
+            }
+          }
+        }
       }
     }
   }

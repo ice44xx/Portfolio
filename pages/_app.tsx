@@ -2,7 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import { AppProps } from 'next/app';
 import '../styles/global.scss';
-import '../styles/query.scss';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (

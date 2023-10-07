@@ -3,11 +3,13 @@
   width: 100%;
   height: 100%;
   display: flex;
+  position: absolute;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 50px;
   .container_send {
+    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,6 +39,7 @@
     }
   }
   .redes {
+    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,7 +74,7 @@
   }
 }
 .openSend {
-  z-index: 1;
+  z-index: 2;
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -112,15 +115,18 @@
     }
   }
   .form {
+    width: 100%;
+    height: 360px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     .formgroupTextarea {
       position: relative;
-      width: 310px;
+      max-width: 310px;
+      width: 100%;
       height: 120px;
-      margin: 15px 0;
+      margin: 10px 0;
       .input {
         position: absolute;
         top: 0;
@@ -168,7 +174,8 @@
     }
     .formgroup {
       position: relative;
-      width: 310px;
+      max-width: 310px;
+      width: 100%;
       height: 60px;
       margin: 15px 0;
       .input {
@@ -190,7 +197,7 @@
         z-index: 1;
         position: absolute;
         left: 1rem;
-        top: 0.8rem;
+        top: 1rem;
         padding: 0 0.5rem;
         background-color: $background_black;
         color: $white;
@@ -222,8 +229,8 @@
       align-items: center;
       gap: 10px;
       width: 100%;
-      max-width: 110px;
-      height: 50px;
+      height: 60px;
+      margin-bottom: -20px;
       background-color: transparent;
       cursor: pointer;
       font-size: 22px;
@@ -304,6 +311,38 @@
         }
         p {
           font-size: 30px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 380px) {
+  .openSend {
+    max-width: 300px;
+    .form {
+      .formgroupTextarea {
+        max-width: 250px;
+      }
+      .formgroup {
+        max-width: 250px;
+      }
+    }
+  }
+}
+@media (max-width: 320px) {
+  .openSend {
+    max-width: 270px;
+    .form {
+      .formgroupTextarea {
+        max-width: 240px;
+        .input {
+          font-size: 16px;
+        }
+      }
+      .formgroup {
+        max-width: 240px;
+        .input {
+          font-size: 16px;
         }
       }
     }

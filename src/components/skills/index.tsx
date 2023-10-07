@@ -138,13 +138,12 @@ const Skills = () => {
             </div>
             <div className={styles.container_content_icon}>
               {skills.map((icon, index) => (
-                <div className={styles.container_icon}>
-                  <img key={index} src={icon.url} alt={icon.alt} className={styles.icon} />
+                <div key={index} className={styles.container_icon}>
+                  <img src={icon.url} alt={icon.alt} className={styles.icon} />
                 </div>
               ))}
             </div>
           </div>
-
           <div className={`${styles.container_content} ${!visible.databases && styles.hidden}`}>
             <div className={styles.header}>
               <p className={`${styles.title}`} onClick={() => handleClick('databases')}>
@@ -154,13 +153,12 @@ const Skills = () => {
             </div>
             <div className={styles.container_content_icon}>
               {databases.map((icon, index) => (
-                <div className={styles.container_icon}>
-                  <img key={index} src={icon.url} alt={icon.alt} className={styles.icon} />
+                <div key={index} className={styles.container_icon}>
+                  <img src={icon.url} alt={icon.alt} className={styles.icon} />
                 </div>
               ))}
             </div>
           </div>
-
           <div className={`${styles.container_content} ${!visible.softwares && styles.hidden}`}>
             <div className={styles.header}>
               <p className={`${styles.title}`} onClick={() => handleClick('softwares')}>
@@ -170,13 +168,12 @@ const Skills = () => {
             </div>
             <div className={styles.container_content_icon}>
               {softwares.map((icon, index) => (
-                <div className={styles.container_icon}>
-                  <img key={index} src={icon.url} alt={icon.alt} className={styles.icon} />
+                <div key={index} className={styles.container_icon}>
+                  <img src={icon.url} alt={icon.alt} className={styles.icon} />
                 </div>
               ))}
             </div>
           </div>
-
           <div className={`${styles.container_content} ${!visible.versions && styles.hidden}`}>
             <div className={styles.header}>
               <p className={`${styles.title}`} onClick={() => handleClick('versions')}>
@@ -186,8 +183,8 @@ const Skills = () => {
             </div>
             <div className={styles.container_content_icon}>
               {versions.map((icon, index) => (
-                <div className={styles.container_icon}>
-                  <img key={index} src={icon.url} alt={icon.alt} className={styles.icon} />
+                <div key={index} className={styles.container_icon}>
+                  <img src={icon.url} alt={icon.alt} className={styles.icon} />
                 </div>
               ))}
             </div>

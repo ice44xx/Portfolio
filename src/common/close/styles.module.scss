@@ -1,7 +1,7 @@
 @import '../../../styles/colors.scss';
 .container_line {
   z-index: 10;
-  top: 2px;
+  top: 0px;
   left: -1px;
   position: absolute;
   display: flex;
@@ -34,8 +34,10 @@
     }
   }
   &.active {
-    left: 130px;
-    background-color: transparent;
+    left: 144px;
+    background-color: rgba(0, 255, 106, 0.723);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
     .line1 {
       top: 20px;
       transform: rotate(50deg);
