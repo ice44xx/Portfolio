@@ -116,6 +116,51 @@ const data = [
     }
   },
   {
+    name: 'Renova Instalações',
+    images: {
+      Pc: '/projects/renova/pc.png',
+      Tablet: '/projects/renova/tablet.png',
+      Celular: '/projects/renova/celular.png'
+    },
+    info: {
+      title: 'Renova Instalações',
+      url: 'https://www.youtube.com/watch?v=RZQlr21fiAU',
+      desc: 'outras informações',
+      tools: [
+        {
+          name: 'HTML5',
+          image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg'
+        },
+        {
+          name: 'CSS3',
+          image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg'
+        },
+        {
+          name: 'Sass',
+          image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg'
+        },
+        {
+          name: 'Javascript',
+          image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg'
+        },
+        {
+          name: 'Webpack',
+          image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg'
+        },
+        {
+          name: 'Figma',
+          image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg'
+        },
+        {
+          name: 'Filezilla',
+          image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/filezilla/filezilla-plain.svg'
+        }
+      ],
+      date: '10 de Março de 2023',
+      rede: 'https://github.com/ice44xx/Renova-instacoes'
+    }
+  },
+  {
     name: 'Studio Emily Dias',
     images: {
       Pc: '/projects/studio/pc.png',
@@ -214,14 +259,14 @@ const data = [
     }
   },
   {
-    name: 'Renova Instalações',
+    name: 'Space X',
     images: {
-      Pc: '/projects/renova/pc.png',
-      Tablet: '/projects/renova/tablet.png',
-      Celular: '/projects/renova/celular.png'
+      Pc: '/projects/space/pc.png',
+      Tablet: '/projects/space/tablet.png',
+      Celular: '/projects/space/celular.png'
     },
     info: {
-      title: 'Renova Instalações',
+      title: 'Space X',
       url: 'https://www.youtube.com/watch?v=RZQlr21fiAU',
       desc: 'outras informações',
       tools: [
@@ -238,35 +283,56 @@ const data = [
           image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg'
         },
         {
-          name: 'Javascript',
-          image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg'
+          name: 'Figma',
+          image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg'
+        }
+      ],
+      date: '10 de Dezembro de 2022',
+      rede: 'https://github.com/ice44xx/Projeto-SpaceX'
+    }
+  },
+  {
+    name: 'Amplify Metas',
+    images: {
+      Pc: '/projects/amplify/pc.png',
+      Tablet: '/projects/amplify/tablet.png',
+      Celular: '/projects/amplify/celular.png'
+    },
+    info: {
+      title: 'Amplify Metas',
+      url: 'https://www.youtube.com/watch?v=RZQlr21fiAU',
+      desc: 'outras informações',
+      tools: [
+        {
+          name: 'HTML5',
+          image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg'
         },
         {
-          name: 'Webpack',
-          image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg'
+          name: 'CSS3',
+          image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg'
+        },
+        {
+          name: 'Sass',
+          image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg'
         },
         {
           name: 'Figma',
           image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg'
-        },
-        {
-          name: 'Filezilla',
-          image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/filezilla/filezilla-plain.svg'
         }
       ],
-      date: '10 de Março de 2023',
-      rede: 'https://github.com/ice44xx/Renova-instacoes'
+      date: '10 de Dezembro de 2022',
+      rede: 'https://github.com/ice44xx/Projeto-SpaceX'
     }
   },
   {
-    name: 'Space X',
+    name: 'Banda PopTop',
     images: {
-      Pc: '/projects/space/pc.png',
-      Tablet: '/projects/space/tablet.png',
-      Celular: '/projects/space/celular.png'
+      Pc: '/projects/banda/pc.png',
+      Tablet: '/projects/banda/tablet.png',
+      Celular: '/projects/banda/celular.png'
     },
     info: {
-      title: 'Space X',
+      title: 'Banda PopTop',
       url: 'https://www.youtube.com/watch?v=RZQlr21fiAU',
       desc: 'outras informações',
       tools: [
