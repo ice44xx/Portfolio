@@ -20,7 +20,7 @@ interface Props {
   }[];
   handleVisible: (item: any) => void;
   handleClick: (item: any) => void;
-  getImgForSelectItem: () => string;
+  selectKey: string;
   onProjectSelect: (index: number) => void;
   isImageVisible: boolean;
 }
@@ -31,7 +31,7 @@ interface Tools {
 
 type Keys = 'Pc' | 'Tablet' | 'Celular';
 
-const Carousel: React.FC<Props> = ({ projects, handleClick, getImgForSelectItem, isImageVisible, handleVisible, onProjectSelect }) => {
+const Carousel: React.FC<Props> = ({ projects, handleClick, selectKey, isImageVisible, handleVisible, onProjectSelect }) => {
   return (
     <>
       <Splide className={styles.splide}>
@@ -48,7 +48,9 @@ const Carousel: React.FC<Props> = ({ projects, handleClick, getImgForSelectItem,
               <div className={styles.container_content_project_items}>
                 <div className={styles.projects}>
                   <div className={`${styles.container_logo} ${isImageVisible ? styles.visible : ''}`}>
-                    <img src={getImgForSelectItem()} alt={project.name} className={styles.logo} />
+                    {selectKey === 'Pc' && <img src={project.images.Pc} alt={project.name} className={styles.logo} />}
+                    {selectKey === 'Celular' && <img src={project.images.Celular} alt={project.name} className={styles.logo} />}
+                    {selectKey === 'Tablet' && <img src={project.images.Tablet} alt={project.name} className={styles.logo} />}
                     <img src='/circulo.png' alt='circulo' className={styles.circle} />
                   </div>
                 </div>

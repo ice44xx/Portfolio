@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './styles.module.scss';
 import Carousel from '@/common/carousel';
 import Card from './card';
@@ -8,9 +8,9 @@ const data = [
   {
     name: 'Neko Animes',
     images: {
-      Pc: '/projects/nury/pc.png',
-      Tablet: '/projects/nury/tablet.png',
-      Celular: '/projects/nury/celular.png'
+      Pc: '/projects/animes/pc.png',
+      Tablet: '/projects/animes/tablet.png',
+      Celular: '/projects/animes/celular.png'
     },
     info: {
       title: 'Neko Animes',
@@ -116,60 +116,11 @@ const data = [
     }
   },
   {
-    name: 'Company Eventos',
-    images: {
-      Pc: '/projects/nury/pc.png',
-      Tablet: '/projects/nury/tablet.png',
-      Celular: '/projects/nury/celular.png'
-    },
-    info: {
-      title: 'Company Eventos',
-      url: 'https://www.youtube.com/watch?v=RZQlr21fiAU',
-      desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, temporibus!',
-      tools: [
-        {
-          name: 'PHP',
-          image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-plain.svg'
-        },
-        {
-          name: 'CSS3',
-          image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg'
-        },
-        {
-          name: 'Sass',
-          image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg'
-        },
-        {
-          name: 'Javascript',
-          image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg'
-        },
-        {
-          name: 'Blade',
-          image: 'https://avatars.githubusercontent.com/u/63051368?v=4'
-        },
-        {
-          name: 'Laravel',
-          image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg'
-        },
-        {
-          name: 'Figma',
-          image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg'
-        },
-        {
-          name: 'Filezilla',
-          image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/filezilla/filezilla-plain.svg'
-        }
-      ],
-      date: '22 de Agosto de 2023',
-      rede: 'https://github.com/ice44xx/CompanyEvent'
-    }
-  },
-  {
     name: 'Studio Emily Dias',
     images: {
-      Pc: '/projects/nury/pc.png',
-      Tablet: '/projects/nury/tablet.png',
-      Celular: '/projects/nury/celular.png'
+      Pc: '/projects/studio/pc.png',
+      Tablet: '/projects/studio/tablet.png',
+      Celular: '/projects/studio/celular.png'
     },
     info: {
       title: 'Studio Emily Dias',
@@ -212,9 +163,9 @@ const data = [
   {
     name: 'Poke Center',
     images: {
-      Pc: '/projects/nury/pc.png',
-      Tablet: '/projects/nury/tablet.png',
-      Celular: '/projects/nury/celular.png'
+      Pc: '/projects/poke/pc.png',
+      Tablet: '/projects/poke/tablet.png',
+      Celular: '/projects/poke/celular.png'
     },
     info: {
       title: 'Poke Center',
@@ -265,9 +216,9 @@ const data = [
   {
     name: 'Renova Instalações',
     images: {
-      Pc: '/projects/nury/pc.png',
-      Tablet: '/projects/nury/tablet.png',
-      Celular: '/projects/nury/celular.png'
+      Pc: '/projects/renova/pc.png',
+      Tablet: '/projects/renova/tablet.png',
+      Celular: '/projects/renova/celular.png'
     },
     info: {
       title: 'Renova Instalações',
@@ -310,9 +261,9 @@ const data = [
   {
     name: 'Space X',
     images: {
-      Pc: '/projects/nury/pc.png',
-      Tablet: '/projects/nury/tablet.png',
-      Celular: '/projects/nury/celular.png'
+      Pc: '/projects/space/pc.png',
+      Tablet: '/projects/space/tablet.png',
+      Celular: '/projects/space/celular.png'
     },
     info: {
       title: 'Space X',
@@ -344,7 +295,6 @@ const data = [
 
 const Projects = () => {
   const [isImageVisible, setIsImageVisible] = useState(true);
-  const [currentProject, setCurrentProject] = useState(0);
   const [selectProject, setSelectProject] = useState(0);
   const [selectedItem, setSelectedItem] = useState<Keys>('Pc');
   const projects = data[selectProject];
@@ -377,9 +327,9 @@ const Projects = () => {
         <div className={styles.conainer_projects}>
           <Carousel
             handleVisible={handleVisible}
-            getImgForSelectItem={getImgForSelectItem}
             handleClick={handleClick}
             projects={data}
+            selectKey={selectedItem}
             isImageVisible={isImageVisible}
             onProjectSelect={handleProjectSelect}
           />
