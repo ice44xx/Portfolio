@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import styles from './styles.module.scss';
 import Carousel from '@/common/carousel';
 import Card from './card';
@@ -8,14 +8,14 @@ const data = [
   {
     name: 'Neko Animes',
     images: {
-      Pc: '/projects/animes/pc.png',
-      Tablet: '/projects/animes/tablet.png',
-      Celular: '/projects/animes/celular.png'
+      Pc: '/projects/animes/pc.webp',
+      Tablet: '/projects/animes/tablet.webp',
+      Celular: '/projects/animes/celular.webp'
     },
     info: {
       title: 'Neko Animes',
-      url: 'https://www.youtube.com/watch?v=RZQlr21fiAU',
-      desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, temporibus!',
+      url: 'https://res.cloudinary.com/dwaima1ht/video/upload/v1696949757/videos/neko.mp4',
+      desc: 'Este projeto é o meu carro-chefe, um site dedicado a animes que oferece uma experiência completa para entusiastas do gênero. Ele abrange informações detalhadas sobre todos animes e mantém uma comunidade no site, proporcionando uma experiência interativa e envolvente para os usuários.',
       tools: [
         {
           name: 'HTML5',
@@ -43,7 +43,7 @@ const data = [
         },
         {
           name: 'NextJs',
-          image: 'https://www.datocms-assets.com/75941/1657707878-nextjs_logo.png'
+          image: 'https://dinhanhthi.com/img/header/nextjs.png'
         },
         {
           name: 'Postgresql',
@@ -73,14 +73,14 @@ const data = [
   {
     name: 'Nury Vidros',
     images: {
-      Pc: '/projects/nury/pc.png',
-      Tablet: '/projects/nury/tablet.png',
-      Celular: '/projects/nury/celular.png'
+      Pc: '/projects/nury/pc.webp',
+      Tablet: '/projects/nury/tablet.webp',
+      Celular: '/projects/nury/celular.webp'
     },
     info: {
       title: 'Nury Vidros',
-      url: 'https://www.youtube.com/watch?v=RZQlr21fiAU',
-      desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, temporibus!',
+      url: 'https://res.cloudinary.com/dwaima1ht/video/upload/v1696949062/videos/nury.mp4',
+      desc: 'O site da vidraçaria obteve destaque na captação de leads, demonstrando eficácia em atrair e converter visitantes interessados em potenciais clientes.',
       tools: [
         {
           name: 'HTML5',
@@ -118,14 +118,14 @@ const data = [
   {
     name: 'Renova Instalações',
     images: {
-      Pc: '/projects/renova/pc.png',
-      Tablet: '/projects/renova/tablet.png',
-      Celular: '/projects/renova/celular.png'
+      Pc: '/projects/renova/pc.webp',
+      Tablet: '/projects/renova/tablet.webp',
+      Celular: '/projects/renova/celular.webp'
     },
     info: {
       title: 'Renova Instalações',
-      url: 'https://www.youtube.com/watch?v=RZQlr21fiAU',
-      desc: 'outras informações',
+      url: 'https://res.cloudinary.com/dwaima1ht/video/upload/v1696949665/videos/renova.mp4',
+      desc: 'ste projeto, que utilizou diversas ferramentas de desenvolvimento web, se destacou não apenas na criação de um site, mas também na captação eficaz de leads, convertendo visitantes em clientes em potencial.',
       tools: [
         {
           name: 'HTML5',
@@ -163,14 +163,14 @@ const data = [
   {
     name: 'Studio Emily Dias',
     images: {
-      Pc: '/projects/studio/pc.png',
-      Tablet: '/projects/studio/tablet.png',
-      Celular: '/projects/studio/celular.png'
+      Pc: '/projects/studio/pc.webp',
+      Tablet: '/projects/studio/tablet.webp',
+      Celular: '/projects/studio/celular.webp'
     },
     info: {
       title: 'Studio Emily Dias',
-      url: 'https://www.youtube.com/watch?v=RZQlr21fiAU',
-      desc: 'outras informações',
+      url: 'https://res.cloudinary.com/dwaima1ht/video/upload/v1696949076/videos/studio.mp4',
+      desc: 'Este projeto se concentra no design de sobrancelhas, visando fornecer uma experiência online envolvente e informativa para os visitantes.',
       tools: [
         {
           name: 'HTML5',
@@ -208,14 +208,14 @@ const data = [
   {
     name: 'Poke Center',
     images: {
-      Pc: '/projects/poke/pc.png',
-      Tablet: '/projects/poke/tablet.png',
-      Celular: '/projects/poke/celular.png'
+      Pc: '/projects/poke/pc.webp',
+      Tablet: '/projects/poke/tablet.webp',
+      Celular: '/projects/poke/celular.webp'
     },
     info: {
       title: 'Poke Center',
-      url: 'https://www.youtube.com/watch?v=RZQlr21fiAU',
-      desc: 'outras informações',
+      url: 'https://res.cloudinary.com/dwaima1ht/video/upload/v1696949294/videos/poke.mp4',
+      desc: 'Este projeto resultou em um site dedicado a fornecer informações sobre Pokémon. Foi desenvolvido utilizando várias ferramentas e tecnologias para criar uma experiência online envolvente e informativa.',
       tools: [
         {
           name: 'HTML5',
@@ -243,7 +243,7 @@ const data = [
         },
         {
           name: 'NextJs',
-          image: 'https://www.datocms-assets.com/75941/1657707878-nextjs_logo.png'
+          image: 'https://dinhanhthi.com/img/header/nextjs.png'
         },
         {
           name: 'Figma',
@@ -261,14 +261,14 @@ const data = [
   {
     name: 'Space X',
     images: {
-      Pc: '/projects/space/pc.png',
-      Tablet: '/projects/space/tablet.png',
-      Celular: '/projects/space/celular.png'
+      Pc: '/projects/space/pc.webp',
+      Tablet: '/projects/space/tablet.webp',
+      Celular: '/projects/space/celular.webp'
     },
     info: {
       title: 'Space X',
-      url: 'https://www.youtube.com/watch?v=RZQlr21fiAU',
-      desc: 'outras informações',
+      url: 'https://res.cloudinary.com/dwaima1ht/video/upload/v1696949093/videos/spacex.mp4',
+      desc: 'Este projeto é uma réplica do site da SpaceX, criado com o objetivo de aprimorar as habilidades de design e desenvolvimento web.',
       tools: [
         {
           name: 'HTML5',
@@ -294,14 +294,14 @@ const data = [
   {
     name: 'Amplify Metas',
     images: {
-      Pc: '/projects/amplify/pc.png',
-      Tablet: '/projects/amplify/tablet.png',
-      Celular: '/projects/amplify/celular.png'
+      Pc: '/projects/amplify/pc.webp',
+      Tablet: '/projects/amplify/tablet.webp',
+      Celular: '/projects/amplify/celular.webp'
     },
     info: {
       title: 'Amplify Metas',
-      url: 'https://www.youtube.com/watch?v=RZQlr21fiAU',
-      desc: 'outras informações',
+      url: 'https://res.cloudinary.com/dwaima1ht/video/upload/v1696949295/videos/amplify.mp4',
+      desc: 'Este projeto, que utilizou uma variedade de ferramentas de desenvolvimento web, dominou o mercado por anos como um site de marketing digital dedicado a ajudar os clientes a realizar seus sonhos.',
       tools: [
         {
           name: 'HTML5',
@@ -314,6 +314,14 @@ const data = [
         {
           name: 'Sass',
           image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg'
+        },
+        {
+          name: 'Javascript',
+          image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg'
+        },
+        {
+          name: 'Webpack',
+          image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg'
         },
         {
           name: 'Figma',
@@ -327,14 +335,14 @@ const data = [
   {
     name: 'Banda PopTop',
     images: {
-      Pc: '/projects/banda/pc.png',
-      Tablet: '/projects/banda/tablet.png',
-      Celular: '/projects/banda/celular.png'
+      Pc: '/projects/banda/pc.webp',
+      Tablet: '/projects/banda/tablet.webp',
+      Celular: '/projects/banda/celular.webp'
     },
     info: {
       title: 'Banda PopTop',
-      url: 'https://www.youtube.com/watch?v=RZQlr21fiAU',
-      desc: 'outras informações',
+      url: 'https://res.cloudinary.com/dwaima1ht/video/upload/v1696949138/videos/banda.mp4',
+      desc: 'Este projeto culminou na criação de um site para uma banda em ascensão, e após a implementação, a banda experimentou um notável e contínuo aumento em seu sucesso e reconhecimento.',
       tools: [
         {
           name: 'HTML5',
@@ -347,6 +355,14 @@ const data = [
         {
           name: 'Sass',
           image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg'
+        },
+        {
+          name: 'Javascript',
+          image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg'
+        },
+        {
+          name: 'Webpack',
+          image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg'
         },
         {
           name: 'Figma',
