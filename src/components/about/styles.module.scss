@@ -241,6 +241,16 @@
     }
   }
 }
+@media (max-width: 450px) {
+  .container {
+    .container_content {
+      .container_hero {
+        width: 200px;
+        height: 200px;
+      }
+    }
+  }
+}
 @media (max-width: 380px) {
   .container {
     .container_content {

@@ -34,7 +34,9 @@ const Home = () => {
       <Transition show={showTransition} />
       {activeSection === 'home' && (
         <div className={styles.container}>
-          <ParticlesComponent />
+          <div className={styles.particles}>
+            <ParticlesComponent />
+          </div>
           <p className={styles.title}>
             <span>NSH</span>CODE
           </p>

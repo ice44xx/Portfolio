@@ -10,6 +10,9 @@
   text-align: center;
   color: white;
   background-color: #13131f;
+  .particles {
+    z-index: 1;
+  }
   .title {
     z-index: 1;
     font-size: 100px;
