@@ -133,7 +133,7 @@ const Skills = () => {
             <div className={styles.header}>
               <p className={`${styles.title}`} onClick={() => handleClick('skills')}>
                 Conhecimentos
-                <img src={visible.skills ? '/arrow.png' : '/arrowUp.png'} alt='flecha' className={styles.arrow} />
+                <img src={visible.skills ? '/arrow.webp' : '/arrowUp.webp'} alt='flecha' className={styles.arrow} />
               </p>
             </div>
             <div className={styles.container_content_icon}>
@@ -148,7 +148,7 @@ const Skills = () => {
             <div className={styles.header}>
               <p className={`${styles.title}`} onClick={() => handleClick('databases')}>
                 Bancos de Dados
-                <img src={visible.databases ? '/arrow.png' : '/arrowUp.png'} alt='flecha' className={styles.arrow} />
+                <img src={visible.databases ? '/arrow.webp' : '/arrowUp.webp'} alt='flecha' className={styles.arrow} />
               </p>
             </div>
             <div className={styles.container_content_icon}>
@@ -163,7 +163,7 @@ const Skills = () => {
             <div className={styles.header}>
               <p className={`${styles.title}`} onClick={() => handleClick('softwares')}>
                 Softwares
-                <img src={visible.softwares ? '/arrow.png' : '/arrowUp.png'} alt='flecha' className={styles.arrow} />
+                <img src={visible.softwares ? '/arrow.webp' : '/arrowUp.webp'} alt='flecha' className={styles.arrow} />
               </p>
             </div>
             <div className={styles.container_content_icon}>
@@ -178,7 +178,7 @@ const Skills = () => {
             <div className={styles.header}>
               <p className={`${styles.title}`} onClick={() => handleClick('versions')}>
                 Controle de Versões
-                <img src={visible.versions ? '/arrow.png' : '/arrowUp.png'} alt='flecha' className={styles.arrow} />
+                <img src={visible.versions ? '/arrow.webp' : '/arrowUp.webp'} alt='flecha' className={styles.arrow} />
               </p>
             </div>
             <div className={styles.container_content_icon}>

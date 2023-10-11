@@ -21,7 +21,6 @@
     width: 100%;
     height: 700px;
     border: 2px solid $primary;
-    backdrop-filter: blur(5px);
     border-radius: 20px;
     overflow: hidden;
     .splide {
@@ -100,6 +99,11 @@
           height: 100%;
           opacity: 1;
           transition: all 0.4s;
+          .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
           .logo {
             object-fit: contain;
             width: 100%;
@@ -167,7 +171,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.362);
+  background-color: $background_project_blur;
   backdrop-filter: blur(10px);
   width: 100%;
   height: 100%;
@@ -356,7 +360,6 @@
     transition: all 0.4s;
   }
 }
-
 @keyframes spin {
   0% {
     transform: rotate(0deg);

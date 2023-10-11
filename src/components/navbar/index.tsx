@@ -9,17 +9,20 @@ interface Props {
 const Navbar: React.FC<Props> = ({ changePage }) => {
   const [active, setActive] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+
   const changeActiveSection = (section: string) => {
     setActiveSection(section);
     changePage(section);
+    setActive(false);
   };
+
   const handleToggle = () => {
     setActive(!active);
   };
 
   return (
     <>
-      <CloseBtn click={handleToggle} />
+      <CloseBtn click={handleToggle} active={active} />
       <div className={`${styles.navbar} ${active ? styles.navbar : styles.navbarHidden}`}>
         <ul>
           <li>

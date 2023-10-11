@@ -66,7 +66,7 @@ const data = [
           image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/filezilla/filezilla-plain.svg'
         }
       ],
-      date: '17 de Agosto de 2023',
+      date: 'Agosto de 2023',
       rede: 'https://github.com/ice44xx/NuryVidros'
     }
   },
@@ -111,7 +111,7 @@ const data = [
           image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/filezilla/filezilla-plain.svg'
         }
       ],
-      date: '17 de Agosto de 2023',
+      date: 'Junho de 2022',
       rede: 'https://github.com/ice44xx/NuryVidros'
     }
   },
@@ -156,7 +156,7 @@ const data = [
           image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/filezilla/filezilla-plain.svg'
         }
       ],
-      date: '10 de Março de 2023',
+      date: 'Janeiro de 2023',
       rede: 'https://github.com/ice44xx/Renova-instacoes'
     }
   },
@@ -201,7 +201,7 @@ const data = [
           image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/filezilla/filezilla-plain.svg'
         }
       ],
-      date: '11 de Agosto de 2023',
+      date: 'Setembro de 2022',
       rede: 'https://github.com/ice44xx/Studio-Emily-Dias'
     }
   },
@@ -254,7 +254,7 @@ const data = [
           image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/filezilla/filezilla-plain.svg'
         }
       ],
-      date: '16 de Agosto de 2023',
+      date: 'Setembro de 2023',
       rede: 'https://github.com/ice44xx/Studio-Emily-Dias'
     }
   },
@@ -287,7 +287,7 @@ const data = [
           image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg'
         }
       ],
-      date: '10 de Dezembro de 2022',
+      date: 'Fevereiro de 2022',
       rede: 'https://github.com/ice44xx/Projeto-SpaceX'
     }
   },
@@ -328,7 +328,7 @@ const data = [
           image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg'
         }
       ],
-      date: '10 de Dezembro de 2022',
+      date: 'Dezembro de 2022',
       rede: 'https://github.com/ice44xx/Projeto-SpaceX'
     }
   },
@@ -369,7 +369,7 @@ const data = [
           image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg'
         }
       ],
-      date: '10 de Dezembro de 2022',
+      date: 'Outubro de 2022',
       rede: 'https://github.com/ice44xx/Projeto-SpaceX'
     }
   }
@@ -393,10 +393,6 @@ const Projects = () => {
         setIsImageVisible(true);
       }, 500);
     }
-  };
-
-  const getImgForSelectItem = () => {
-    return projects.images[selectedItem];
   };
 
   const handleProjectSelect = (index: number) => {

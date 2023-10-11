@@ -1,10 +1,15 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './styles.module.scss';
 interface Props {
   click: () => void;
+  active: boolean;
 }
-const CloseBtn: React.FC<Props> = ({ click }) => {
-  const [isActive, setIsActive] = useState(false);
+const CloseBtn: React.FC<Props> = ({ click, active }) => {
+  const [isActive, setIsActive] = useState(active);
+
+  useEffect(() => {
+    setIsActive(active);
+  }, [active]);
 
   const toggleAnimation = () => {
     setIsActive(!isActive);

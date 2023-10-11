@@ -1,6 +1,7 @@
 import styles from '../../components/projects/styles.module.scss';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
+import { useState } from 'react';
 
 interface Props {
   projects: {
@@ -41,7 +42,7 @@ const Carousel: React.FC<Props> = ({ projects, handleClick, selectKey, isImageVi
               <div className={styles.title}>
                 <p className={styles.name}>{project.name}</p>
                 <div className={styles.info} onClick={handleVisible}>
-                  <img src='/more.png' alt='informações' />
+                  <img src='/more.webp' alt='informações' />
                   <p>Info</p>
                 </div>
               </div>
@@ -51,13 +52,13 @@ const Carousel: React.FC<Props> = ({ projects, handleClick, selectKey, isImageVi
                     {selectKey === 'Pc' && <img src={project.images.Pc} alt={project.name} className={styles.logo} />}
                     {selectKey === 'Celular' && <img src={project.images.Celular} alt={project.name} className={styles.logo} />}
                     {selectKey === 'Tablet' && <img src={project.images.Tablet} alt={project.name} className={styles.logo} />}
-                    <img src='/circulo.png' alt='circulo' className={styles.circle} />
+                    <img src='/circulo.webp' alt='circulo background' className={styles.circle} />
                   </div>
                 </div>
                 <div className={styles.container_another_items}>
                   {Object.keys(project.images).map(item => (
                     <div className={styles.container_options}>
-                      <img src='/arrowRight.png' alt='flecha para direita' />
+                      <img src='/arrowRight.webp' alt='flecha para direita' />
                       <p onClick={() => handleClick(item as Keys)} key={item} className={styles.item}>
                         {item}
                       </p>

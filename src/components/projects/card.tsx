@@ -26,7 +26,7 @@ const Card: React.FC<Props> = ({ toggle, open, info }) => {
   return (
     <div className={styles.container_blur}>
       <div className={`${styles.container_card} ${open ? styles.container_card : styles.container_card_hidden}`}>
-        <img src='/fechar.png' alt='fechar' className={styles.close} onClick={toggle} />
+        <img src='/fechar.webp' alt='fechar' className={styles.close} onClick={toggle} />
         <div className={styles.container_content_card}>
           <div className={styles.info}>
             <p className={styles.title}>{info?.title}</p>
@@ -37,7 +37,7 @@ const Card: React.FC<Props> = ({ toggle, open, info }) => {
           </div>
           <div className={`${styles.video_blur} ${isDemo ? styles.video_blur_off : ''} `}>
             <div className={styles.container_video}>
-              <img src='/fechar.png' alt='fechar' className={styles.close} onClick={openVideo} />
+              <img src='/fechar.webp' alt='fechar' className={styles.close} onClick={openVideo} />
               <ReactPlayer className={styles.video} url={info?.url} muted loop={true} playing={true} />
             </div>
           </div>
@@ -60,7 +60,7 @@ const Card: React.FC<Props> = ({ toggle, open, info }) => {
           <div className={styles.footer}>
             <p className={styles.date}>{info?.date}</p>
             <a href={info?.rede} target='_blank'>
-              <img src='/redes/github.png' alt='github' />
+              <img src='/redes/github.webp' alt='github' />
             </a>
           </div>
         </div>

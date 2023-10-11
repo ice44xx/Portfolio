@@ -9,8 +9,8 @@
   left: 0;
   width: 200px;
   height: 100%;
-  border-right: 2px solid white;
-  background-color: rgba(255, 255, 255, 0.021);
+  border-right: 2px solid $white;
+  background-color: $background_navbar_blur;
   backdrop-filter: blur(8px);
   ul {
     display: flex;

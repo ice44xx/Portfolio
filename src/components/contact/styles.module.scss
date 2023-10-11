@@ -278,7 +278,7 @@
     }
   }
 }
-@media (max-width: 450px) {
+@media (max-width: 545px) {
   .container {
     .redes {
       flex-direction: column;
@@ -302,6 +302,10 @@
         }
       }
     }
+  }
+}
+@media (max-width: 450px) {
+  .container {
     .container_send {
       .header {
         .send {

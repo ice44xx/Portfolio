@@ -26,6 +26,10 @@ const Home = () => {
 
   return (
     <main>
+      <div className={styles.background}>
+        <img src='/back_left.webp' alt='' className={styles.background_left} />
+        <img src='/back_right.webp' alt='' className={styles.background_right} />
+      </div>
       <Navbar changePage={handlePageChange} />
       <Transition show={showTransition} />
       {activeSection === 'home' && (
@@ -40,7 +44,7 @@ const Home = () => {
           <div className={styles.container_whatsapp}>
             <Link href={'https://api.whatsapp.com/send?phone=555193347391'} target='_blank' className={styles.link}>
               <p className={styles.header}>Vamos conversar ?</p>{' '}
-              <img src='/whatsapp.png' alt='logo whatsapp' className={`${styles.img} fas fa-basketball fa-bounce`}></img>
+              <img src='/whatsapp.webp' alt='logo whatsapp' className={`${styles.img} fas fa-basketball fa-bounce`}></img>
             </Link>
           </div>
         </div>

@@ -13,7 +13,7 @@ const Form: React.FC<Props> = ({ toggle, open }) => {
           <span>NSH</span>CODE
         </p>
       </div>
-      <img src='fechar.png' alt='fechar' className={styles.close} onClick={toggle} />
+      <img src='fechar.webp' alt='fechar' className={styles.close} onClick={toggle} />
       <form className={styles.form} action='https://formspree.io/f/meqbrble' method='POST'>
         <div className={styles.formgroup}>
           <input type='text' id='name' name='name' placeholder=' ' required className={styles.input} />
@@ -44,7 +44,7 @@ const Form: React.FC<Props> = ({ toggle, open }) => {
         </div>
         <button type='submit' className={styles.btn}>
           Enviar
-          <img src='/enviar.png' alt='nshcode enviar' className={styles.img} />
+          <img src='/enviar.webp' alt='nshcode enviar' className={styles.img} />
         </button>
       </form>
     </div>

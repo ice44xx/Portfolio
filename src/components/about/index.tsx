@@ -26,7 +26,7 @@ const About = () => {
             <div className={styles.green}></div>
             <div className={styles.pink}></div>
             <div className={styles.blue}></div>
-            <img src='/hero.png' alt='NSHCODE' className={styles.hero} />
+            <img src='/hero.webp' alt='NSHCODE' className={styles.hero} />
           </div>
           <div className={styles.about}>
             <p className={styles.title}>
