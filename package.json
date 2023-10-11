@@ -15,7 +15,7 @@
     "@types/react-dom": "^18.2.7",
     "@types/react-text-mask": "^5.4.11",
     "@types/simple-icons": "^5.21.1",
-    "next": "13.5.2",
+    "next": "^13.5.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icon-cloud": "^4.1.4",
