@@ -15,7 +15,7 @@ const data = [
     info: {
       title: 'Neko Animes',
       url: 'https://res.cloudinary.com/dwaima1ht/video/upload/v1696949757/videos/neko.mp4',
-      desc: 'Este projeto é o meu carro-chefe, um site dedicado a animes que oferece uma experiência completa para entusiastas do gênero. Ele abrange informações detalhadas sobre todos animes e mantém uma comunidade no site, proporcionando uma experiência interativa e envolvente para os usuários.',
+      desc: 'Este projeto é o meu carro-chefe, um site dedicado a animes que oferece uma experiência completa para entusiastas do gênero.',
       tools: [
         {
           name: 'HTML5',
@@ -125,7 +125,7 @@ const data = [
     info: {
       title: 'Renova Instalações',
       url: 'https://res.cloudinary.com/dwaima1ht/video/upload/v1696949665/videos/renova.mp4',
-      desc: 'ste projeto, que utilizou diversas ferramentas de desenvolvimento web, se destacou não apenas na criação de um site, mas também na captação eficaz de leads, convertendo visitantes em clientes em potencial.',
+      desc: 'Neste projeto, foi utilizado diversas ferramentas de desenvolvimento web, se destacou muito na sua captação eficaz de leads.',
       tools: [
         {
           name: 'HTML5',
@@ -215,7 +215,7 @@ const data = [
     info: {
       title: 'Poke Center',
       url: 'https://res.cloudinary.com/dwaima1ht/video/upload/v1696949294/videos/poke.mp4',
-      desc: 'Este projeto resultou em um site dedicado a fornecer informações sobre Pokémon. Foi desenvolvido utilizando várias ferramentas e tecnologias para criar uma experiência online envolvente e informativa.',
+      desc: 'Este projeto resultou em um site dedicado a fornecer informações sobre Pokémon. Foi desenvolvido utilizando várias tecnologias para criar uma experiência online envolvente e informativa.',
       tools: [
         {
           name: 'HTML5',
@@ -342,7 +342,7 @@ const data = [
     info: {
       title: 'Banda PopTop',
       url: 'https://res.cloudinary.com/dwaima1ht/video/upload/v1696949138/videos/banda.mp4',
-      desc: 'Este projeto culminou na criação de um site para uma banda em ascensão, e após a implementação, a banda experimentou um notável e contínuo aumento em seu sucesso e reconhecimento.',
+      desc: 'Este projeto culminou na criação de um site para uma banda em ascensão, e após a implementação, a banda experimentou um notável reconhecimento.',
       tools: [
         {
           name: 'HTML5',

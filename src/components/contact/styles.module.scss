@@ -318,31 +318,65 @@
 }
 @media (max-width: 380px) {
   .openSend {
-    max-width: 300px;
+    max-width: 260px;
+    height: 400px;
     .form {
+      height: 280px;
       .formgroupTextarea {
-        max-width: 250px;
+        margin-top: 15px;
+        max-width: 230px;
+        .input {
+          font-size: 15px;
+          height: 80px;
+        }
+        .label {
+          font-size: 15px;
+        }
+        .input:focus + .label {
+          top: -0.6rem;
+          font-size: 15px;
+        }
       }
       .formgroup {
-        max-width: 250px;
+        max-width: 230px;
+        .input {
+          font-size: 15px;
+          height: 50px;
+        }
+        .label {
+          font-size: 15px;
+        }
+        .input:focus + .label {
+          top: -0.6rem;
+          font-size: 15px;
+        }
+      }
+      .btn {
+        font-size: 18px;
       }
     }
   }
 }
 @media (max-width: 320px) {
-  .openSend {
-    max-width: 270px;
-    .form {
-      .formgroupTextarea {
-        max-width: 240px;
-        .input {
-          font-size: 16px;
+  .container {
+    .redes {
+      .container_redes {
+        .container_icon {
+          img {
+            max-width: 50px;
+          }
         }
       }
-      .formgroup {
-        max-width: 240px;
-        .input {
-          font-size: 16px;
+    }
+    .container_send {
+      .header {
+        gap: 10px;
+        .send {
+          max-width: 40px;
+          max-height: 40px;
+        }
+        p {
+          font-size: 25px;
         }
       }
     }

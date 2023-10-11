@@ -41,7 +41,7 @@ const Contact = () => {
         </div>
         <div className={styles.redes}>
           <div className={styles.header}>
-            <p>Redes</p>
+            <p>Minhas Redes</p>
           </div>
           <div className={styles.bar}></div>
           <div className={styles.container_redes}>

@@ -1,4 +1,5 @@
 import styles from './styles.module.scss';
+import { useState } from 'react';
 import ReactPlayer from 'react-player';
 
 interface Props {
@@ -18,19 +19,34 @@ interface Tools {
   image: string;
 }
 const Card: React.FC<Props> = ({ toggle, open, info }) => {
+  const [isDemo, setIsDemo] = useState(true);
+  const openVideo = () => {
+    setIsDemo(!isDemo);
+  };
   return (
     <div className={styles.container_blur}>
       <div className={`${styles.container_card} ${open ? styles.container_card : styles.container_card_hidden}`}>
         <img src='/fechar.png' alt='fechar' className={styles.close} onClick={toggle} />
         <div className={styles.container_content_card}>
-          <p className={styles.title}>{info?.title}</p>
-          <p className={styles.desc}>{info?.desc}</p>
+          <div className={styles.info}>
+            <p className={styles.title}>{info?.title}</p>
+            <p className={styles.desc}>{info?.desc}</p>
+          </div>
+          <div className={styles.demo} onClick={openVideo}>
+            <p>Preview DEMO</p>
+          </div>
+          <div className={`${styles.video_blur} ${isDemo ? styles.video_blur_off : ''} `}>
+            <div className={styles.container_video}>
+              <img src='/fechar.png' alt='fechar' className={styles.close} onClick={openVideo} />
+              <ReactPlayer className={styles.video} url={info?.url} muted loop={true} playing={true} />
+            </div>
+          </div>
           <div className={styles.container_content_parts}>
             <div className={styles.container_video}>
-              <ReactPlayer className={styles.video} url={info?.url} muted loop={false} playing={true} />
+              <ReactPlayer className={styles.video} url={info?.url} muted loop={true} playing={true} />
             </div>
             <div className={styles.tools}>
-              <p>Esse projeto foi desenvolvido com as seguintes ferramentas:</p>
+              <p className={styles.desc}>Esse projeto foi desenvolvido com as seguintes ferramentas:</p>
               <div className={styles.container_content_tools}>
                 {info?.tools.map(tool => (
                   <div className={styles.container_tools}>

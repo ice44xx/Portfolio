@@ -34,7 +34,7 @@ const About = () => {
             </p>
             <p className={styles.desc}>Com experiência em diversos projetos</p>
             <p className={styles.desc_one}>
-              Especializado em <span>ReactJs</span>, <span>Typescript</span>, <span>NodeJs</span> e <span>PHP</span>.
+              Especializado em <span>JavaScript</span>, <span>Php</span>, <span>NodeJs</span>.
             </p>
             <p className={styles.desc_two}>Minha carreira inclui a criação de plataformas de streaming, cursos online e diversas landing pages.</p>
             <p className={styles.desc_third}>
