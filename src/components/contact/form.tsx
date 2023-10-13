@@ -1,11 +1,28 @@
 import styles from './styles.module.scss';
 import Masked from 'react-text-mask';
+import Swal from 'sweetalert2';
+import axios from 'axios';
 
 interface Props {
   toggle: () => void;
   open: boolean;
 }
 const Form: React.FC<Props> = ({ toggle, open }) => {
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const form = e.currentTarget as HTMLFormElement;
+    const formData = new FormData(form);
+    try {
+      const res = await axios.post('https://formspree.io/f/meqbrble', formData);
+      if (res.status === 200) {
+        Swal.fire('Mensagem Enviada!', 'Estarei retornando o mais rápido possível', 'success');
+      } else {
+        Swal.fire('Erro', 'Houve um erro ao enviar o formulário.', 'error');
+      }
+    } catch (error) {
+      Swal.fire('Erro', 'Houve um erro ao enviar o formulário.', 'error');
+    }
+  };
   return (
     <div className={`${styles.openSend} ${open ? styles.openSend : styles.openSendHidden}`}>
       <div className={styles.title}>
@@ -14,7 +31,7 @@ const Form: React.FC<Props> = ({ toggle, open }) => {
         </p>
       </div>
       <img src='fechar.webp' alt='fechar' className={styles.close} onClick={toggle} />
-      <form className={styles.form} action='https://formspree.io/f/meqbrble' method='POST'>
+      <form className={styles.form} onSubmit={handleSubmit}>
         <div className={styles.formgroup}>
           <input type='text' id='name' name='name' placeholder=' ' required className={styles.input} />
           <label htmlFor='name' className={styles.label}>
