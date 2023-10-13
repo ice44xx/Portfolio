@@ -211,7 +211,7 @@ const data = [
         }
       ],
       date: 'Setembro de 2022',
-      rede: 'https://github.com/ice44xx/Studio-Emily-Dias'
+      rede: 'https://github.com/ice44xx/Studio-Dias'
     }
   },
   {
