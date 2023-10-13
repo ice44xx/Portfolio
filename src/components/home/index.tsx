@@ -26,8 +26,8 @@ const Home = () => {
   return (
     <main>
       <div className={styles.background}>
-        <img src='/back_left.webp' alt='' className={styles.background_left} />
-        <img src='/back_right.webp' alt='' className={styles.background_right} />
+        <img src='/back_left.webp' alt='Faixa decorativa' className={styles.background_left} />
+        <img src='/back_right.webp' alt='Faixa decorativa' className={styles.background_right} />
       </div>
       <Navbar changePage={handlePageChange} />
       <Transition show={showTransition} />
