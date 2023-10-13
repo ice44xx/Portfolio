@@ -169,7 +169,7 @@ const data = [
     },
     info: {
       title: 'Studio Emily Dias',
-      url: 'https://res.cloudinary.com/dwaima1ht/video/upload/v1696949076/videos/studio.mp4',
+      url: 'https://res.cloudinary.com/dwaima1ht/video/upload/v1697228777/videos/studio.mp4',
       desc: 'Este projeto se concentra no design de sobrancelhas, visando fornecer uma experiência online envolvente e informativa para os visitantes.',
       tools: [
         {
@@ -189,9 +189,18 @@ const data = [
           image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg'
         },
         {
-          name: 'Webpack',
-          image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg'
+          name: 'ReactJs',
+          image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'
         },
+        {
+          name: 'Typescript',
+          image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg'
+        },
+        {
+          name: 'NextJs',
+          image: 'https://dinhanhthi.com/img/header/nextjs.png'
+        },
+
         {
           name: 'Figma',
           image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg'
