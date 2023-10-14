@@ -19,7 +19,7 @@ class MyDocument extends Document {
           <link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css' />
           <link rel='preconnect' href='https://fonts.googleapis.com'></link>
           <link href='https://fonts.googleapis.com/css2?family=Passion+One&family=Rubik:wght@300;400&display=swap' rel='stylesheet'></link>
-          <link rel='shortcut icon' href='favicon.png' type='image/x-icon' />
+          <link rel='shortcut icon' href='favicon.webp' type='image/x-icon' />
         </Head>
         <body>
           <Main />

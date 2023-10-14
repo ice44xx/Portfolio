@@ -110,10 +110,10 @@ const versions = [
 const Skills = () => {
   const [visible, setVisible] = useState({
     skills: true,
-    databases: true,
-    softwares: true,
-    versions: true,
-    image: true
+    databases: false,
+    softwares: false,
+    versions: false,
+    image: false
   });
   const handleClick = (containerKey: any) => {
     setVisible((prevVisibility: any) => ({

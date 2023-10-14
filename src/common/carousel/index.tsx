@@ -36,7 +36,7 @@ const Carousel: React.FC<Props> = ({ projects, handleClick, selectKey, isImageVi
     <>
       <Splide className={styles.splide}>
         {projects.map((project, index) => (
-          <SplideSlide className={styles.splide_slide} onClick={() => onProjectSelect(index)}>
+          <SplideSlide key={index} className={styles.splide_slide} onClick={() => onProjectSelect(index)}>
             <div className={styles.container_projects_box}>
               <div className={styles.title}>
                 <p className={styles.name}>{project.name}</p>
