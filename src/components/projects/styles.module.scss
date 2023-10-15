@@ -166,15 +166,18 @@
   }
 }
 .container_blur {
+  top: 0;
+  left: 0;
   z-index: 10;
   position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: $background_project_blur;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(3px);
   width: 100%;
   height: 100%;
+  min-height: 100vh;
   transition: all 0.4s;
   .container_card {
     position: relative;
@@ -244,14 +247,17 @@
         }
       }
       .video_blur {
+        top: 0;
+        left: 0;
         position: fixed;
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
         height: 100%;
+        min-height: 100vh;
         background-color: rgba(0, 0, 0, 0.362);
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(3px);
         .container_video {
           position: relative;
           display: flex;

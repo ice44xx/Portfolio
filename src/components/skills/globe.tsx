@@ -30,14 +30,14 @@ import {
 const options: ICloud['options'] = {
   clickToFront: 500,
   imageScale: 1.2,
-  initial: [0.1, -0.1],
+  initial: [0.1, -0.01],
   // interval: number
   // lock: null | 'x' | 'y' | 'xy'
   // maxBrightness: number
   // minBrightness: number
   // minSpeed: number
   // minTags: 0 - 200
-  // noMouse: boolean
+  noMouse: true,
   // noSelect: boolean
   // noTagsMessage: string
   // offsetX: number
