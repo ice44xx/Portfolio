@@ -1,5 +1,5 @@
 import { useCallback } from 'react';
-import type { Container, Engine } from 'tsparticles-engine';
+import type { Engine } from 'tsparticles-engine';
 import Particles from 'react-particles';
 import { loadSlim } from 'tsparticles-slim';
 
@@ -8,7 +8,7 @@ export const ParticlesComponent = () => {
     await loadSlim(engine);
   }, []);
 
-  const particlesLoaded = useCallback(async (container: Container | undefined) => {}, []);
+  const particlesLoaded = useCallback(async () => {}, []);
   return (
     <Particles
       id='tsparticles'
@@ -20,7 +20,7 @@ export const ParticlesComponent = () => {
             value: '#13131F'
           }
         },
-        fpsLimit: 120,
+        fpsLimit: 60,
         interactivity: {
           events: {
             onClick: {
@@ -67,9 +67,9 @@ export const ParticlesComponent = () => {
           number: {
             density: {
               enable: true,
-              area: 1500
+              area: 2000
             },
-            value: 90
+            value: 60
           },
           opacity: {
             value: 0.4
